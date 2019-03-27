@@ -1,0 +1,111 @@
+<template name="navbar">
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo"><img src="/logo.png" alt="luludeals" class="luludealsLogo"></a>
+        <ul class="right">
+        {{#if ifAdmin}}
+             <li><a href="#" data-activates="slide-out" class="main_side_nav"><i class="material-icons">note_add</i></a></li>
+        {{/if}}
+          <li class="hide-on-med-and-down"><a href="http://www.facebook.com">Don't miss our next deal on Facebook!</a></li> 
+          <li class="fb_icon_li hide-on-small-only"><img id="fb_icon_a" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/2000px-F_icon.svg.png" width="64" alt=""></li>
+          <li><a href="/cart"><i class="material-icons left">shopping_cart</i><span class="badge new">{{cartItems}}</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+ 
+  <ul id="slide-out" class="side-nav">
+    <div class="row">
+      <form class="col s12 addItem">
+
+        <h5 class="imgNoMarginBottom">Add an Item</h5>
+
+        <div class="row">
+
+          <div class="input-field col s12 titleMarginBottom">
+            <input name="title" id="title" type="text" class="validate add_title" required="" aria-required="true">
+            <label for="title">Title*</label>
+          </div>
+        
+          <div class="input-field col s12 field_first_measures">
+            <input name="description" id="description" type="text" class="validate" required="" aria-required="true">
+            <label for="description">Description*</label>
+          </div>
+
+          <div class="input-field col s6 field_first_measures">
+            <input name="category" id="category" type="text" class="validate" required="" aria-required="true">
+            <label for="category">Category*</label>
+          </div>
+
+          <div class="input-field col s6 field_first_measures">
+            <input name="price" id="price" type="text" class="validate" required="" aria-required="true">
+            <label class="price_font_size" for="price">Price* (excl. shipping)</label>
+          </div>
+
+          <div class="input-field col s6 field_first_measures">
+            <input name="price_st_ship" id="price_st_ship" type="text" class="validate" required="" aria-required="true">
+            <label class="price_font_size" for="price_st_ship">St. Shipping price*</label>
+          </div>
+
+          <div class="input-field col s6 field_first_measures">
+            <input name="time_st_ship" id="time_st_ship" type="text" class="validate" required="" aria-required="true">
+            <label class="price_font_size" for="time_st_ship">St. Shipping time*</label>
+          </div>
+
+          <div class="input-field col s6 field_first_measures">
+            <input name="price_pr_ship" id="price_pr_ship" type="text" class="validate">
+            <label class="price_font_size" for="price_pr_ship">Fast Shipping price</label>
+          </div>
+          <div class="input-field col s6 field_first_measures">
+            <input name="time_pr_ship" id="time_pr_ship" type="text" class="validate">
+            <label class="price_font_size" for="time_pr_ship">Fast Shipping time</label>
+          </div>
+
+          <div class="input-field col s12 chipsNoMarginTop">
+            <div class="chips chips-initial chips-placeholder margin_bot_5"></div>     
+          </div>
+
+          <div class="input-field col s6 ">
+            <input name="image1" id="image1" type="text" class="validate imgNoMarginBottom" required="" aria-required="true">
+            <label for="image1">Main image link*</label>
+          </div>
+
+          <div class="input-field col s6 ">
+            <input name="image2" id="image2" type="text" class="validate imgNoMarginBottom" required="" aria-required="true">
+            <label for="image2">Second image link*</label>
+          </div>
+
+          <div class="input-field col s6">
+            <input name="image3" id="image3" type="text" class="validate">
+            <label for="image3">Third image link</label>
+          </div>
+
+          <div class="input-field col s6">
+            <input name="image4" id="image4" type="text" class="validate">
+            <label for="image4">Fourth image link</label>
+          </div>
+
+          <!--<div class="input-field col s12">
+            <div class="file-field input-field">
+              <div class="btn">
+                <span>Images</span>
+                <input type="file" multiple>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Select Images">
+              </div>
+            </div>
+          </div> -->
+
+          <div class="center-align">
+            <input type="submit" class="waves-effect waves-light btn">
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+  </ul>
+
+</template>

@@ -1,0 +1,22 @@
+<template name="email">
+<p>Hey {{ address.first_name }},</p>
+<p>Thanks for your order. We really appreciate it! {{payment}}</p>
+<p>We want you to feel special - that's why we provide smallest possible prices for our items!</p>
+<p>Your goods will be shipped to the following address:</p>
+<p>{{address.first_name}} {{address.last_name}}</p>
+<p>{{address.street}} {{address.streetNr}}</p>
+<p>{{address.zip}} {{address.city}}</p>
+<p>{{address.region}}</p>
+<p>{{address.country}}</p>
+<br>
+<p>Total price: {{money}} € (incl. shipping)</p>
+<p>You can revoew your order by clicking this link <a href="http://www.luludeals.com/order/{{invoiceId}}">Your Order</a></p>
+<br>
+<p>If you have any questions or remarks regarding your order, don't hesitate to contact us! Just send us an email to support@luludeals.com
+    with your Order Id: <b>{{invoiceId}}</b> and we promise to respond you in the next 12 hours!
+</p>
+<br>
+<p>Best Wishes</p>
+<p>Luludeals</p>
+<p>CEO Lukas Navickas</p>
+</template>

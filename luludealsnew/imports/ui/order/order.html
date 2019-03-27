@@ -1,0 +1,108 @@
+<template name="order">
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        
+        <div class="col s12">
+          <div class="progress payment_progr">
+              <div class="determinate" style="width: 100%"></div>
+          </div>
+        </div>
+
+        <div class="col s12">
+          <div class="row">
+            <div class="col s4">
+              <img class="responsive-img done_icon right" src="https://cdn0.iconfinder.com/data/icons/round-ui-icons/512/tick_green.png" alt="">
+            </div>
+            <div class="col s8 left order_thanks">
+              <h4>Thanks for your order!</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12">
+          <div class="order_phrases">
+            <div>
+              {{#if invoiceItems.paid}}
+                <h6 class="center-align"><i class="material-icons order_done">done</i> We've got your payment!</h6>
+              {{else}}
+                <h6 class="center-align"><i class="material-icons order_pause">pause</i> We still didn't get your payment, but don't worry - banks need up to 3 days to process it!</h6>
+              {{/if}}
+            </div>
+
+            <div>
+              <h6 class="center-align"><i class="material-icons order_done">done</i> We forwarded your order to the sales department!</h6>
+            </div>  
+
+            <div>
+              {{#if invoiceItems.paid}}
+                <h6 class="center-align"><i class="material-icons order_done">done</i> Logistic department will ship it as quick as possible!</h6>
+              {{else}}
+                <h6 class="center-align"><i class="material-icons order_pause">pause</i> Our logistics department will prepare your goods and send them right after we got your payment!</h6>
+              {{/if}}
+              
+            </div>   
+
+            <div>
+              <h6 class="center-align"><i class="material-icons order_done">done</i> Your order Nr. is <b>{{invoiceItems._id}}</b>. Keep it safe in case you need help later!</h6>
+            </div>  
+          </div>
+        </div>
+        
+          
+         <div>
+            <h5 class="center-align h5_shipping order_review"><b>Review your order</b></h5>
+         </div> 
+    {{#each invoiceItems.carts}}
+  
+        <div class="col s12 m6 l6">   
+          <div class="row some_top_margin">     
+            <div class="col s4 m4 l4">
+              <img class="responsive-img" src="{{checkImage product}}" alt="">
+            </div>
+          
+            <div class="col s8 m8 l8">
+              <h5 class="title_cart little_bottom_margin">{{checkName product}}</h5>
+
+                <div class="row no_bottom_margin">
+                  <div class="col">
+                    <p class="option_word">Quantity: {{qty}}</p> 
+                  </div>
+                </div>
+                
+                
+                <div class="row no_bottom_margin">
+                  <div class="col">
+                    <p class="option_word">Options: {{#if option}} {{option}} {{else}} none {{/if}}</p>
+                  </div>
+                </div>
+                
+
+                <div class="row no_bottom_margin">
+                  <div class="col">
+                   {{#if equals '1' shipping}}
+                    <p class="option_word">Shipping Method: Standard</p>
+                   {{else}}
+                    <p class="option_word">Shipping Method: Premium</p>
+                   {{/if}}
+                  </div>
+                </div>
+
+                <div class="row little_bottom_margin">
+                  <div class="col">
+                    <p class="options">Est. Shipping time: {{checkShipTime shipping product}} days</p>
+                  </div>
+                </div>
+              </div>
+           </div>   
+
+           <hr>
+
+         </div>
+        
+      {{/each}}
+
+      </div>
+    </div>
+  </div>
+</template>

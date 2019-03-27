@@ -1,0 +1,32 @@
+<template name="summary">
+        <div class="col s12 m4 l4">
+            <ul id='dropdown1' class="collapsible" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header active"><i class="material-icons">shopping_basket</i>Total <span class="right"><b>{{addPrices total.price total.shipping}} €</b></span></div>
+                <div class="collapsible-body cart_prices">
+                  <p>Item Total <span class="right"><b>{{PriceFix total.price}} €</b></span></p>
+                  <p>Shipping<span class="right"><b>{{PriceFix total.shipping}} €</b></span></p>
+                </div>
+
+                {{#if checkIfShow showNext}}
+                  {{#if moreThanZero total}}
+                    <a href="/shipping" class="btn-large waves-effect waves-light pay_now" type="submit" name="action">Pay
+                        <i class="material-icons right">send</i>
+                    </a>
+                  {{/if}}  
+                {{/if}}
+
+                
+              </li>
+            </ul>
+
+          <hr>
+
+            <div class="row">
+              <div class="col s12">
+              <p class="center-align text_payment">We accept all reliable payment methods!</p>
+                <img src="https://www.mecka.com/CustomerData/930db313ba6c4558a1e4bc8979cfb854/Images/paypal-cards.png" id="visa_size" alt="">
+              </div>
+            </div>
+        </div>
+</template>

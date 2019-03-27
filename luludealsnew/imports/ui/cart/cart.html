@@ -1,0 +1,122 @@
+<template name="cart">
+  <div class="container">
+    <div class="section">
+      <div class="row">
+
+        <div class="col s12 m8 l8">
+         {{#each cartitems}}
+            
+          <div class="row some_top_margin"> 
+           
+           <div class="deleteKorbRel">
+             <span class="deleteKorbAbs"><i class="material-icons">delete</i></span>
+           </div>  
+            
+            <div class="col s4 m4 l4">
+              <img class="responsive-img" src="{{cartproduct.imageOne}}" alt="">
+            </div>
+          
+            <div class="col s8 m8 l8">
+              <h5 class="title_cart little_bottom_margin">{{cartproduct.title}}</h5>
+
+                  <div class="row no_bottom_margin">
+                    <div class="col">
+                      <p class="option_word">Quantity:</p>
+                    </div>
+                    <div class="col s5">
+                      <select id="quantPicker">
+                        {{#each iterateToTen}}
+                          {{#if equals this ../qty}}
+                            <option selected value="{{this}}">{{this}}</option>
+                          {{else}}  
+                            <option value="{{this}}">{{this}}</option>            
+                          {{/if}}
+                        {{/each }}
+                      </select>
+                    </div>
+                  </div>
+                  
+                  {{#if notnull option}}
+                    <div class="row no_bottom_margin">
+                      <div class="col">
+                        <p class="option_word">Options:</p>
+                      </div>
+                      <div class="col s5">
+                        <select id="optionPicker">          
+                          {{#each cartproduct.options}}
+                            {{#if equals tag ../option}}
+                              <option selected value="{{tag}}">{{tag}}</option>
+                            {{else}}  
+                              <option value="{{tag}}">{{tag}}</option>            
+                            {{/if}}
+                          {{/each}}
+                        </select>
+                      </div>
+                    </div>
+                  {{/if}}
+
+
+               <!-- if no Options, then <span id="options">None</span>-->
+              
+            
+                  <div class="row no_bottom_margin">
+                    <div class="col">
+                      <p class="option_word">Shipping Method:</p>
+                    </div>
+                    <div class="col s5">
+                      <select id="shipPicker">
+                        {{#if equals '1' shipping}}
+                          <option selected value="1">Standard</option>
+                          <option value="2">Premium</option>
+                        {{else}}  
+                          <option value="1">Standard</option>
+                          <option selected value="2">Premium</option>
+                        {{/if}}  
+                      </select>
+                    </div>
+                  </div>
+
+
+
+                    <div class="row little_bottom_margin">
+                      <div class="col">
+                        <p class="options">Est. Shipping time:</p>
+                      </div>
+                      <div class="col s5">
+                        {{#if equals '1' shipping}}
+                          <span id="shipping_time">{{cartproduct.timeStShip}} days</span>
+                        {{else}}
+                          <span id="shipping_time">{{cartproduct.timePrShip}} days</span>
+                        {{/if}}  
+                      </div>
+                    </div>
+
+                    <div class="row much_bottom_margin">
+                      <div class="col">
+                        <p class="options">Price:</p>
+                      </div>
+                      <div class="col s5">
+                        <span id="shipping_time"><b>{{itemPrice qty cartproduct.price}} &euro;</b></span>
+                      </div>
+                    </div>
+
+              </div>
+
+
+
+          </div>
+
+          <hr>
+         {{/each}} 
+
+
+        </div>
+
+        {{> summary showNext="1"}}
+
+      </div>
+    </div>
+  </div>
+</template>
+
+

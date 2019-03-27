@@ -1,0 +1,15 @@
+<template name="layout">
+    {{>navbar}}
+    {{>Template.dynamic template=main }}
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+            $('.materialboxed').materialbox();
+            $(".main_side_nav").sideNav(); 
+            $('.chips-placeholder').material_chip({
+                placeholder: 'press Enter after each option',
+                secondaryPlaceholder: 'Options? (e.g. S, M, L sizes for clothes)',
+            });
+        });
+    </script>
+</template>

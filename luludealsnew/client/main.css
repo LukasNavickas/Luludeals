@@ -1,0 +1,425 @@
+/* CSS declarations go here */
+.fb_icon_li {
+    cursor: pointer;
+}
+
+#fb_icon_a {
+    margin-right: 60px;
+}
+
+span.badge.new {
+    margin-top: 8px !important;
+    border-radius: 8px !important;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+    margin-right: 3px !important;
+    min-width: 0px !important;
+}
+
+nav ul a span.badge {
+    position: absolute !important;
+}
+
+span.badge.new:after {
+    content: "" !important;
+}
+
+.hide-on-med-and-down {
+    height: 64px !important;
+}
+
+.section_nopad {
+    margin-bottom: -10px;
+    padding-bottom: 0;
+}
+
+.chip {
+    cursor: pointer;
+}
+
+.card_name {
+    font-size: 17px !important;
+}
+
+.edit_line_height {
+    line-height: 6px !important;
+}
+
+.add_to_button {
+    margin-left: 6px !important;
+    font-size: 1.6rem !important;
+}
+
+.more_info {
+    margin-left: 0 !important;
+}
+
+.card.small .card-content, .card.medium .card-content, .card.large .card-content {
+    overflow: visible !important;
+}
+
+.nopad {
+    margin-top: 0;
+}
+
+.hidden_pic {
+    display: none !important;
+}
+
+.title_cart {
+    margin-top: 0;
+}
+
+.options {
+    display: inline;
+}
+
+.little_bottom_margin {
+    margin-bottom: 5px !important;
+}
+
+.no_bottom_margin {
+    margin-bottom: 0px !important;
+}
+
+.minus_top_margin {
+    margin-top: -4px;
+}
+
+div.col.s5 > div > input.select-dropdown {
+    margin-bottom: 0;
+}
+
+div.col.s5 > div > input.select-dropdown {
+    height: 1.5rem;
+}
+
+div.col.s5 > div > span.caret {
+    top: 3px;
+}
+
+p.option_word {
+    margin-top: 3px !important;
+    margin-bottom: 3px;
+}
+
+.much_bottom_margin {
+    margin-bottom: 10px !important;
+}
+
+.some_top_margin {
+    margin-top: 16px !important;
+    margin-bottom: 0px;
+}
+
+.collapsible-body {
+    background-color: #fafafa;
+}
+
+#dropdown1 > li > div.cart_prices > p {
+    padding: 1rem;
+}
+
+.pay_now {
+    width: 100%;
+}
+
+#visa_size {
+    width: 100%;
+}
+
+.payment_progr {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.row_measures {
+    margin-bottom: 2px;
+}
+
+.field_first_measures,
+.h5_shipping {
+    margin-top: 0;
+}
+
+.field_measures {
+    margin-top: 12px;
+}
+
+.input_measures {
+    margin-bottom: 0 !important;
+}
+
+#diff_add {
+    margin: 30px 0;
+}
+
+.next_button {
+    margin-top: 25px;
+}
+
+.pay_paypal {
+    position: relative;
+    top: 8px;
+    left: 10px;
+}
+
+.pay_credit {
+    height: 33px;
+    position: relative;
+    top: 8px;
+    left: 10px;
+}
+
+.pay_bank {
+    display: inline !important;
+    float: none !important;
+    margin-left: 10px;
+}
+
+.paypal_margins {
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+
+.already_paid {
+    font-size: 14px;
+}
+
+.card_first_name {
+    margin-left: 15px;
+}
+
+.order_review {
+    margin-bottom: 25px;
+}
+
+.done_icon {
+    width: 100px;
+}
+
+.order_done {
+    color: green;
+}
+
+.order_pause {
+    color: #e69900;
+}
+
+.order_phrases {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.main_card_style {
+    position: relative;
+}
+
+.main_price {
+    position: absolute;
+    z-index: 500;
+    top: -5px;
+    right: -8px;
+}
+
+/*.main_over_price {
+    overflow: visible !important;
+}*/
+
+.card-medium {
+    overflow: visible !important;
+}
+
+.add_textarea {
+    top: 3rem !important;
+}
+
+.add_title {
+    margin-bottom: 0 !important;
+}
+
+.add_description {
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.add_options {
+    margin-bottom: 10px !important;
+    padding-left: 0 !important;
+}
+
+#slide-out > div > form > div > div:nth-child(4) > div > input {
+    margin-bottom: 0px;
+}
+
+.margin_bot_5 {
+    margin-bottom: 5px;
+}
+
+.price_font_size {
+    font-size: 12px !important;
+}
+
+#slide-out > div > form > div > div > div > input.input {
+    width: 100% !important;
+}
+
+.HideAndSeek {
+    display: none;
+}
+
+#card-number, #cvv, #expiration {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #9e9e9e !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    height: 3rem !important;
+    width: 100% !important;
+    font-size: 15px !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    box-sizing: content-box !important;
+    transition: all 0.3s !important;
+    margin-bottom: 0 !important;
+}
+
+input[type=text]:focus.noStyle {
+    border-bottom: 1px solid #9e9e9e !important;
+    box-shadow: none !important;
+}
+
+input[type=text]:valid.noStyle {
+    border-bottom: 1px solid #9e9e9e !important;
+    box-shadow: none !important;
+    color: #3b893e;
+}
+
+input[type=text]:invalid.noStyle {
+    color: red !important;
+}
+
+
+#first_name::-webkit-input-placeholder {color: #a9acb2;}
+#last_name::-webkit-input-placeholder {color: #a9acb2;}
+#first_name:-moz-placeholder {color: #a9acb2;}
+#last_name:-moz-placeholder {color: #a9acb2;}
+#first_name::-moz-placeholder {color: #a9acb2;}
+#last_name::-moz-placeholder {color: #a9acb2;}
+#first_name:-ms-input-placeholder {color: #a9acb2;}
+#last_name:-ms-input-placeholder {color: #a9acb2;}
+
+.noOptions {
+    color: grey !important;
+    font-size: 0.9rem;
+}
+
+.deleteKorbRel {
+    position: relative;
+}
+
+.deleteKorbAbs {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+
+.spinnIt {
+  position: absolute;
+  z-index: 2000000000;
+  padding-top: 300px;
+  padding-left: 100%;
+  background: rgba(255,255,255,.85) center center no-repeat;
+}
+
+.titleMarginBottom {
+    margin-bottom: 15px;
+}
+
+.chipsNoMarginTop {
+    margin-top: 0px;
+}
+
+.imgNoMarginBottom {
+    margin-bottom: 0px !important;
+}
+
+.chipColor {
+    color: #039be5 !important;
+    text-decoration: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+#paypal-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.submitCardDetails {
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+
+@media only screen and (min-width: 0) {
+    .luludealsLogo {
+        height: 50px;
+        margin-top: 3px;
+        padding-left: 30px;
+    }
+
+    #fb_icon_a,
+    .fb_icon_li {
+        height: 57px;
+    }
+
+    #fb_icon_a {
+        margin-right: 25px;
+    }
+
+    .card.medium {
+        height: 500px;
+    }
+
+    .text_payment {
+        font-size: 16px;
+    }
+
+    .text_payment {
+        font-size: 14px;
+        margin: 0;
+        color: #607d8b;
+    }
+
+    .order_thanks {
+        margin-top: 8px;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .luludealsLogo {
+        height: 56px;
+        margin-top: 4px;
+        padding-left: 20px;
+    }
+
+    #fb_icon_a,
+    .fb_icon_li {
+        height: 65px;
+    }
+
+    .card.medium {
+        height: 450px;
+    }
+
+    .text_payment {
+        font-size: 14px;
+        margin: 0;
+        color: #607d8b;
+    }
+
+    .order_thanks {
+        margin-top: 15px;
+    }
+}

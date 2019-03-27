@@ -1,0 +1,118 @@
+<template name="checkout">
+
+  {{#if isChanged}}
+    <div class="spinnIt">
+        {{> spinner}}
+    </div>
+  {{/if}}
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+
+        <div class="col s12">
+          <div class="progress payment_progr">
+              <div class="determinate" style="width: 66%"></div>
+          </div>
+        </div>
+
+        <div class="col s12 m8 l8">
+          <ul id='dropdown1' class="collapsible" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header">1. Pay by <img src="http://i76.imgup.net/accepted_c22e0.png" class="pay_credit" alt=""></div>
+              <div class="collapsible-body cart_prices">
+
+               <form role="form" id="payment-form">
+                <div class="row row_measures">
+                  <div class="col s1"></div>
+                  <div class="input-field col s5 card_first_name">
+                    <input id="first_name" type="text" class="validate input_measures noStyle" placeholder="First Name">
+                    <label for="first_name"></label>
+                  </div>
+                  <div class="input-field col s5 card_last_name">
+                    <input id="last_name" type="text" class="validate input_measures noStyle" placeholder="Last Name">
+                    <label for="last_name"></label>
+                  </div>
+                  <div class="col s1"></div>
+                </div>
+
+                <div class="row row_measures">
+                  <div class="col s1"></div>
+                  <div class="input-field col s10 card_first_name">
+                    <div id="card-number"></div>
+                    <label for="card-number"></label>
+                  </div>
+                  <div class="col s1"></div>
+                </div>
+
+                <div class="row row_measures">
+                  <div class="col s1"></div>
+                  <div class="input-field col s6 card_first_name">
+                    <div id="expiration"></div>
+                    <label for="expiration"></label>
+                  </div>
+
+                  <div class="input-field col s3 card_last_name">
+                    <div id="cvv"></div>
+                    <label for="cvv"></label>
+                  </div>
+                  <div class="col s1"></div>
+                </div>
+                
+                <!--<form role="form">
+                  <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                      <div id="payment-form"></div>
+                      <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                  </div>
+                </form>-->
+
+                 
+
+                <div class="center-align submitCardDetails">
+                  <input type="submit" class="waves-effect waves-light btn">
+                </div>
+               
+              </form>
+
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">2. Log in to <img src="https://www.paypalobjects.com/webstatic/de_DE/i/de-pp-logo-100px.png" class="pay_paypal" alt=""></div>
+              <div class="collapsible-body">
+                <div class="center-align">
+                  
+                 <form role="form" id="payment-form"> 
+                  <div id="paypal-container"></div>
+                  <!--<div class="center-align">
+                    <input type="submit" class="waves-effect waves-light btn">
+                  </div>-->
+                </form>
+
+                </div>  
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">3. Pay by bank transfer <i class="fa fa-university pay_bank" aria-hidden="true"></i></div>
+              <div class="collapsible-body cart_prices">
+                <p>Beneficiary Name: <span class="right"><b>Lukas Navickas</b></span></p>
+                <p>Bank Name: <span class="right"><b>BNP Paribas S.A. (Consorsbank)</b></span></p>
+                <p>IBAN: <span class="right"><b>DE26760300800220401094</b></span></p>
+                <p>Amount: <span class="right"><b>{{PriceFix clientPrice}} €</b></span></p>
+                <p>Payment Details: <span class="right"><b>{{clientOrderId}}</b></span></p>
+                <div class="center-align">
+                  <p><span class="already_paid">Already paid?</span> <button class="waves-effect waves-light btn notPaid">CLICK HERE</button></p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          
+        </div>
+
+        {{> summary}}
+
+      </div>
+    </div>
+  </div>
+</template>

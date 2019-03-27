@@ -1,0 +1,184 @@
+<template name="shipping">
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+
+        <div class="col s12">
+          <div class="progress payment_progr">
+              <div class="determinate" style="width: 33%"></div>
+          </div>
+        </div>
+
+        <div class="col s12 m8 l8">
+          <div class="row">
+            <form class="col s12">
+
+              <div>
+                <h5 class="center-align h5_shipping">Shipping Address:</h5>
+              </div>
+
+              <div class="row row_measures">
+                <div class="input-field col s6 field_first_measures">
+                  <input id="first_name" type="text" class="validate input_measures" required="" aria-required="true" value="{{usersInfo.profile.first_name}}">
+                  <label for="first_name">First Name*</label>
+                </div>
+                <div class="input-field col s6 field_first_measures">
+                  <input id="last_name" type="text" class="validate input_measures" value="{{usersInfo.profile.last_name}}">
+                  <label for="last_name">Last Name*</label>
+                </div>
+              </div>
+
+              <div class="row row_measures">
+                <div class="input-field col s6 field_measures">
+                  <input id="country" type="text" class="validate input_measures" value="{{usersInfo.profile.country}}">
+                  <label for="country">Country*</label>
+                </div>
+                <div class="input-field col s6 field_measures">
+                  <input id="city" type="text" class="validate input_measures" value="{{usersInfo.profile.city}}">
+                  <label for="city">City*</label>
+                </div>
+              </div>
+
+              <div class="row row_measures">
+                <div class="input-field col s9 field_measures">
+                  <input id="street" type="text" class="validate input_measures" value="{{usersInfo.profile.street}}">
+                  <label for="street">Street Name*</label>
+                </div>
+                <div class="input-field col s3 field_measures">
+                  <input id="street_number" type="number" class="validate input_measures" value="{{usersInfo.profile.streetNr}}">
+                  <label for="street_number">Number*</label>
+                </div>
+              </div>
+
+              <div class="row row_measures">
+                <div class="input-field col s3 field_measures">
+                  <input id="zip" type="text" class="validate input_measures" value="{{usersInfo.profile.zip}}">
+                  <label for="zip">ZIP code*</label>
+                </div>
+                <div class="input-field col s9 field_measures">
+                  <input id="region" type="text" class="validate input_measures" value="{{usersInfo.profile.region}}">
+                  <label for="region">State/Province/Region</label>
+                </div>
+              </div>
+
+              <div class="row row_measures">
+                <div class="input-field col s6 field_measures">
+                  <input id="email" type="email" class="validate input_measures" value="{{usersInfo.profile.email}}">
+                  <label for="email" data-error="Please enter the correct email address">Email*</label>
+                </div>
+                <div class="input-field col s6 field_measures">
+                  <input id="phone" type="text" class="validate input_measures" value="{{usersInfo.profile.phone}}">
+                  <label for="phone">Phone number*</label>
+                </div>
+              </div>
+
+              <p id="diff_add">
+                <input type="checkbox" id="different_address" />
+                <label for="different_address">Is your billing address <b>different</b> from shipping address?</label>
+              </p>
+
+            </form>
+
+
+            <form class="col s12 HideAndSeek" id="secForm">
+
+              <div>
+                <h5 class="center-align h5_shipping">Billing Address:</h5>
+              </div>
+
+              <div class="row row_measures">
+                <div class="input-field col s6 field_first_measures">
+                  <input id="first_name2" type="text" class="validate input_measures">
+                  <label for="first_name2">First Name</label>
+                </div>
+                <div class="input-field col s6 field_first_measures">
+                  <input id="last_name2" type="text" class="validate input_measures">
+                  <label for="last_name2">Last Name</label>
+                </div>
+              </div>
+
+              <div class="row row_measures">
+                <div class="input-field col s6 field_measures">
+                  <input id="country2" type="text" class="validate input_measures">
+                  <label for="country2">Country</label>
+                </div>
+                <div class="input-field col s6 field_measures">
+                  <input id="city2" type="text" class="validate input_measures">
+                  <label for="city2">City</label>
+                </div>
+              </div>
+
+              <div class="row row_measures">
+                <div class="input-field col s9 field_measures">
+                  <input id="street2" type="text" class="validate input_measures">
+                  <label for="street2">Street Name</label>
+                </div>
+                <div class="input-field col s3 field_measures">
+                  <input id="street_number2" type="number" class="validate input_measures">
+                  <label for="street_number2">Number</label>
+                </div>
+              </div>
+
+              <div class="row row_measures">
+                <div class="input-field col s3 field_measures">
+                  <input id="zip2" type="text" class="validate input_measures">
+                  <label for="zip2">ZIP/Postal code</label>
+                </div>
+                <div class="input-field col s9 field_measures">
+                  <input id="region2" type="text" class="validate input_measures">
+                  <label for="region2">State/Province/Region</label>
+                </div>
+              </div>
+
+              <div class="row row_measures">
+                <div class="input-field col s6 field_measures">
+                  <input id="email2" type="email" class="validate input_measures">
+                  <label for="email2">Email</label>
+                </div>
+                <div class="input-field col s6 field_measures">
+                  <input id="phone2" type="text" class="validate input_measures">
+                  <label for="phone2">Phone number</label>
+                </div>
+              </div>
+
+              <div class="center-align next_button">
+                <button class="btn-large waves-effect waves-light addShipping" type="submit" name="action">Next
+                  <i class="material-icons right">send</i>
+                </button>
+              </div> 
+
+            </form>
+
+            </div>
+        </div>
+
+        <div class="col s12 m4 l4">
+            <ul id='dropdown1' class="collapsible" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header active"><i class="material-icons">shopping_basket</i>Total <span class="right"><b>{{addPrices total.price total.shipping}} €</b></span></div>
+                <div class="collapsible-body cart_prices">
+                  <p>Item Total <span class="right"><b>{{PriceFix total.price}} €</b></span></p>
+                  <p>Shipping<span class="right"><b>{{PriceFix total.shipping}} €</b></span></p>
+                </div>
+                <a href="/payment" class="btn-large waves-effect waves-light pay_now addShipping" type="submit" name="action">Pay
+                  <i class="material-icons right">send</i>
+                </a>
+              </li>
+            </ul>
+
+          <hr>
+
+            <div class="row">
+              <div class="col s12">
+              <p class="center-align text_payment">We accept all reliable payment methods!</p>
+                <img src="https://www.mecka.com/CustomerData/930db313ba6c4558a1e4bc8979cfb854/Images/paypal-cards.png" id="visa_size" alt="">
+              </div>
+            </div>
+        </div>
+
+     </div>
+   </div>  
+  </div>      
+
+</template>
